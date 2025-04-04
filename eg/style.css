@@ -1,0 +1,93 @@
+/* Resetowanie marginesów i paddingu */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ustawienia podstawowe dla body */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1F2023; /* Tło strony */
+    color: #fff; /* Kolor tekstu */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Styl dla kontenera zegara */
+.zegar {
+    background-color: #4F25C6; /* Kolor tła zegara */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Styl dla pojedynczego pola */
+.pole {
+    margin-bottom: 20px;
+}
+
+/* Styl dla etykiet */
+label {
+    font-size: 1.2em;
+    display: block;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+/* Styl dla inputów */
+input[type="time"],
+input[type="number"],
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    border: 2px solid #4F25C6; /* Obramowanie w kolorze #4F25C6 */
+    font-size: 1em;
+    color: #1F2023; /* Kolor tekstu w inputach */
+    background-color: #fff; /* Tło inputów */
+    transition: border 0.3s ease;
+}
+
+/* Efekt na obramowanie inputa przy focuse */
+input[type="time"]:focus,
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #fff;
+    outline: none;
+}
+
+/* Styl dla inputa, który ma już wartość */
+input[type="text"] {
+    background-color: #e0e0e0; /* Lekko szare tło dla tekstu */
+}
+
+/* Styl dla ostatniego pola, w którym wyświetla się pozostały czas */
+input#pozostaly {
+    font-weight: bold;
+    color: #4F25C6; /* Kolor tekstu na czas pozostały */
+    text-align: center;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+    .zegar {
+        padding: 20px;
+        width: 90%;
+    }
+
+    label {
+        font-size: 1em;
+    }
+
+    input[type="time"],
+    input[type="number"],
+    input[type="text"] {
+        padding: 10px;
+    }
+}
